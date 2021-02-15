@@ -28,7 +28,7 @@ Desarrollaremos un aplicación web que dentro tenga un videojuego de plataforma 
 
 ## Purpose
 
-Set the expectation for the product you’re building. So, start by defining the purpose of your product.
+Nuestro propósito es quitar el miedo y los esterotipos que conlleva estudiar una carrera STEAM. Queremos que los estudiantes tomen una decisión informada respecto a su futuro con ayuda del videojuego que desarrollaremos.
 
 ## Scope
 
