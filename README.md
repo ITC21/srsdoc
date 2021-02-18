@@ -1,54 +1,72 @@
-# Easy to use Template for Software Requirements Specification
+# STEAMEATE
 
-Start with a descriptive and succinct name for your project. Change the above with the name of your project
+# Tabla de contenido
 
-# Table of content
-
-- [Introduction](#introduction)
-  - [Purpose](#purpose)
-  - [Scope](#scope)
-  - [Definitions and Acronyms](#definitions-and-acronyms)
-- [Overall Description](#overall-description)
-  - [User classes](#user-classes)
-  - [Assumptions and Dependencies](#assumptions-and-dependencies)
-- [System Features and Requirements](#system-features-and-requirements)
-  - [Functional Requirements](#functional-requirements)
-  - [External Interface Requirements](#external-interface-requirements)
-  - [Non-functional Requirements](#non-functional-requirements)
+- [Introducción](#Introducción)
+  - [Propósito](#Propósito)
+  - [Alcance](#Alcance)
+  - [Definiciones y Acrónimos](#Definicios-y-Acrónimos)
+- [Descripción General](#Descripción-general)
+  - [Clases de usuarios](#Clases-de-usuarios)
+  - [Asumciones y Dependencias](#Asumciones-y-Dependencias)
+- [Características del Sistema y Requerimientos](#Características-y-requerimientos)
+  - [Requerimientos funcionales](#Requerimientos-funcionales)
+  - [Requerimientos de la Interface externa](#Requerimientos-de-Interface-externo)
+  - [Requerimientos no funcionales](#Requerimientos-no-funcionales)
 - [Screens](#screens)
   - [Wireframes](#wireframes)
+- [Referencias](#Referencias)
 
-_Table of content generated using VSCode plugin [Markdown TOC](https://marketplace.visualstudio.com/items?itemName=AlanWalk.markdown-toc)_
+_Tabla de contenido generada usando el plugin Markdown de VSCode: [Markdown TOC](https://marketplace.visualstudio.com/items?itemName=AlanWalk.markdown-toc)_
 
-# Introduction
+# Introducción
 
 STEAM Es una asociación sin fines de lucro que está liderando un movimiento regional que impulsa la Educación y el talento STEAM, los emplos del futuro y la innovación, con visión social e incluyente.
 
 Desarrollaremos un aplicación web que dentro tenga un videojuego de plataforma para que las personas entre 18-19 años puedan tomar una decisión más informada sobre que carreras STEAM hay y porque deberían elegir una.
 
-## Purpose
+## Propósito
 
 Nuestro propósito es quitar el miedo y los esterotipos que conlleva estudiar una carrera STEAM. Queremos que los estudiantes tomen una decisión informada respecto a su futuro con ayuda del videojuego que desarrollaremos.
 
-## Scope
+## Alcance
 
-Describe the software being specified. Include benefits, objectives, and goals. This should relate to overall business goals, especially if teams outside of development will have access to the SRS
+Desarrollaremos una applicación web que dentro contenga un videojuego. La applicación web se implementará con JavaScript, HTML y CSS la cual tiene el objetivo de ser visualizada en cualquier dispositivo electrónico. Utilizaremos la plataforma de desarrollo <em>Unity</em> junto con el lenguaje C# para hacer el videojuego. Por último utilizaremos MySQL para ir recabando los medidores STEAM solicitados por la OSF.
 
-## Definitions and Acronyms
+<strong>Beneficios: </strong>
 
-Include any non-trivial definition or acronym used in the document.
+<ul>
+<li>Personas entre 18 y 19 años (alumnos de preparotoria) podrán conocer las carreras STEAM (carreras del futuro)</li>
+<li>Mediante el videojuego, conocerán caracteristicas sobre alguna carrera de su interés y podrán eliminar ciertos estereotipos ligados a esta.</li>
+<li>STEAM podrá conocer los intereses de las personas con las que trabaje, con estos datos podrá tomar mejor decisiones sobre como ayudarlos.</li>
+<li>Incluir a más mujeres en carreras como alguna de las ingenierías ya que actualmente no hay un porcentaje equilibrado entre los estudiantes</li>
+</ul>
 
-# Overall Description
+## Definiciones y Acrónimos
 
-Describe what you’re going to build. Is it an update to an existing product? Is it a new product? Is it an add-on to a product you’ve already created?
+<ul>
+<li>STEAM: Science Technology Engineering Arts and Mathematics</li>
+<li>JavaScript: Es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web [1]</li>
+<li>HTML: Es un lenguaje de marcado que se utiliza para el desarrollo de páginas de Internet. Se trata de la siglas que corresponden a HyperText Markup Language, es decir, Lenguaje de Marcas de Hipertexto [2]</li>
+<li>CSS: Es el lenguaje de estilos utilizado para describir la presentación de documentos HTML o XML [3]</li>
+<li>C#: Es un lenguaje de programación desarrollado por Microsoft, orientado a objetos, que ha sido diseñado para compilar diversas aplicaciones que se ejecutan en .NET Framework. Se trata de un lenguaje simple, eficaz y con seguridad de tipos [4] </li>
+<li>MySQL: Es un sistema de gestión de bases de datos relacionales de código abierto (RDBMS, por sus siglas en inglés) con un modelo cliente-servidor. [5] </li>
+</ul>
 
-These are important to describe upfront, so everyone knows what you’re building.
+# Descripción General
 
-## User classes
+Nuestra applicación web será una adición a la página existente de STEAM. El videojuego lo realizaremos desde cero tomando inspiraciones de otras piezas.
+
+## Clases de usuarios
 
 User classes and characteristics are critical. You’ll need to define who (different roles) is going to use the product and how. Don't forget to include each user needs.
 
-## Assumptions and Dependencies
+<ul>
+<li>Usuario: Cualquier persona que accese a la página web y pruebe el videojuego </li>
+<li>Administrador: Este usuario tiene el control sobre los usuarios que hay, además de poder ver los indicadores STEAM que recolecta el videojuego</li>
+</ul>
+
+## Asumciones y Dependencias
 
 There might be factors that impact your ability to fulfill the requirements outlined in this document. What are those factors?
 
@@ -56,11 +74,23 @@ Are there any assumptions you’re making that could turn out to be false? You s
 
 Finally, you should note if your project is dependent on any external factors. This might include software components you’re reusing from another project.
 
-# System Features and Requirements
+<ul>
+
+<li>Usuarios: </li>
+
+<ul>
+<li>Realizar la implementación dentro de la página para que las personas puedan crear sus usuarios o inciar sesión</li>
+<li>Encriptación de los datos personales de los usuarios para proteger contraseñas o mails</li>
+<li>Realizar una interfaz para representar y visualizar los indicadores STEAM</li>
+</ul>
+
+</ul>
+
+# Características del Sistema y Requerimientos
 
 This is where you detail the specific requirements for building your product.
 
-## Functional Requirements
+## Requerimientos funcionales
 
 The functional requirements describe the services and functions of a system. Functional requirements must be precise and unambiguous.
 
@@ -74,7 +104,7 @@ You may want to use the following template table.
 | ------------------ | --------------------------------------------------------------- | ----------- | ----------------------------------------- |
 | _Short identifier_ | _As a [type of user], I want [some goal] so that [some reason]_ | _Must have_ | _Write here any additional consideration_ |
 
-## External Interface Requirements
+## Requerimientos de la Interface externa
 
 External interface requirements are types of functional requirements. They outline how your product will interface with other components or systems.
 
@@ -85,7 +115,7 @@ There are several types of interfaces you may have requirements for, including:
 - Software
 - Communications
 
-## Non-functional Requirements
+## Requerimientos no funcionales
 
 Non-functional requirements are restrictions on the system or the development process. Non-functional requirements can be more critical than functional ones. If they are not met, the system is useless!
 
@@ -110,3 +140,13 @@ Here are some popular tools for wireframing:
 - https://ninjamock.com/
 - https://www.justinmind.com/
 - https://moqups.com/
+
+# Referencias
+
+<ol>
+<li>https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Qu%C3%A9_es_JavaScript</li>
+<li>https://codigofacilito.com/articulos/que-es-html    </li>
+<li>https://developer.mozilla.org/es/docs/Web/CSS</li>
+<li>https://openwebinars.net/blog/que-es-c-introduccion/</li>
+<li>https://www.hostinger.mx/tutoriales/que-es-mysql/</li>
+</ol>
