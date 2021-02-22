@@ -104,6 +104,31 @@ You may want to use the following template table.
 | ------------------ | --------------------------------------------------------------- | ----------- | ----------------------------------------- |
 | _Short identifier_ | _As a [type of user], I want [some goal] so that [some reason]_ | _Must have_ | _Write here any additional consideration_ |
 
+<h2>Página Web:</h2>
+<ol>
+<li>Registrar usuarios que no hayan entrado a la pagina anteriormente</li>
+<li>Iniciar sesión para usuarios que haya entrado a la pagina</li>
+<li>Desplegar información sobre la carrera de ITC y porque un alumno debería de considerar estudiarla</li>
+<li>Mostrar en un apartado el videojuego</li>
+<li>Conexión a una base de datos</li>
+<li>Recolectar los indicadores STEAM</li>
+<li>Realizar la visualización de Datos de los indicadores</li>
+<li>Devolver indicadores a los usuarios que sean administradores</li>
+</ol>
+
+<h2>Videojuego: </h2>
+<ol>
+<li>Cargar y obtener la información de usuarios que hayan jugado anteriormente</li>
+<li>Mostrar un menú donde se muestre el puntaje de jugadores con partidas previas</li>
+<li>Explicar las mecánicas del juego al inicio</li>
+<li>Mostrar elementos como el jugador, barra de vida, escenario, enemigos, puntaje actual u otros con los que el jugador pueda interactuar.</li>
+<li>Desplegar un apartado donde aparezcan las hábilidades (bloques de código) con las que el jugador cuenta al momento de pausar el juego y mostrar una descripción breve de que es lo que hace cada habilidad</li>
+<li>Desplegar información que sea relevante para el jugador ya que esta puede ser necesaria para alguna mecánica o progresar en la historia</li>
+<li>Detectar cuando el jugador perdió (Barra de vida vacía o fuera del área jugable)</li>
+<li>Detectar cuando el jugador pasa de nivel y/o gana la partida</li>
+<li>Mostrar el puntaje de su partida</li>
+</ol>
+
 ## Requerimientos de la Interface externa
 
 External interface requirements are types of functional requirements. They outline how your product will interface with other components or systems.
