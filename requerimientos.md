@@ -124,9 +124,9 @@ You may want to use the following template table.
 <li>Mostrar elementos como el jugador, barra de vida, escenario, enemigos, puntaje actual u otros con los que el jugador pueda interactuar.</li>
 <li>Desplegar un apartado donde aparezcan las hábilidades (bloques de código) con las que el jugador cuenta al momento de pausar el juego y mostrar una descripción breve de que es lo que hace cada habilidad</li>
 <li>Desplegar información que sea relevante para el jugador ya que esta puede ser necesaria para alguna mecánica o progresar en la historia</li>
+<li>Mostrar el puntaje de su partida</li>
 <li>Detectar cuando el jugador perdió (Barra de vida vacía o fuera del área jugable)</li>
 <li>Detectar cuando el jugador pasa de nivel y/o gana la partida</li>
-<li>Mostrar el puntaje de su partida</li>
 </ol>
 
 ## Requerimientos de la Interface externa
