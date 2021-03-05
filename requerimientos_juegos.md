@@ -94,7 +94,28 @@ El personaje podrá ser controlado por bloques de código, estos serán escogido
 Are there any interesting mechanics? If so, how are you going to accomplish them? Physics,
 algorithms, etc.
 
-- El jugador podrá defenderse de un enemigo especial que son los "bugs", estos afectan las acciones del personaje, atacándolos con bloques de código.
+1. Principales
+    a. Caminar a la derecha
+    b. Caminar a la izquierda
+    c. Saltar
+    d. Agacharse
+    e. Atacar
+
+2. Secundarias
+    a. Saltar y atacar
+    b. Moverse y atacar
+    c. Esperar
+    d. Agacharse y atacar
+    e. Saltar y moverse
+    f. Agacharse y moverse
+
+3. Enemigos
+    a. Moverse a la derecha
+    b. Moverse a la izquierda
+    c. Moverse arriba
+    d. Moverse abajo
+    e. Atacar
+    f. Saltar
 
 # Level Design
 
