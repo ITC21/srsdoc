@@ -128,70 +128,60 @@ i. Ambiente
    a. Ambiente
    i. Vértigo, adrenalina, peligro, rápidez, muerte
    b. Objetos
-   i. Ambiente 1. Edificios 2. Rascacielos 3.
-   ii. Interactivos 1. Guards 2. Giant rats 3. Chests
+   i. Ambiente 1. Edificios 2. Rascacielos 3. Calles
+   ii. Interactivos 1. Nuevos bloques de código 2. Nuevos enemigos 3. Enemigos especiales 4. Terminal
 
 7. Ciudad futurista
    a. Ambiente
-   i. Blanco, edificios grandes, más dificultad
+   i. Moderno, estético, futuristico, TRON
    b. Objetos
-   i. Ambiente 1. Rodents 2. Torches 3. Suits of armor
-   ii. Interactivos 1. Guards 2. Giant rats 3. Chests
+  ii. Interactivos 1. Nuevos bloques de código 2. Nuevos enemigos 3. Enemigos especiales 4. Jefe Final
 
 _(example)_
 
 ## Game Flow
 
-```
-1.	Player starts in forest
-2.	Pond to the left, must move right
-3.	To the right is a hill, player jumps to traverse it (“jump” taught)
-4.	Player encounters castle - door’s shut and locked
-5.	There’s a window within jump height, and a rock on the ground
-6.	Player picks up rock and throws at glass (“throw” taught)
-7.	… etc.
-```
-
-(example)
+1. El jugador comienza en una cueva (tutorial).
+2. Tendrá que mover a su personaja a la derecha para poder salir de la cueva y progresar.
+3. El jugador solo tendra acceso a dos comandos en el inicio del juego, caminar a la derecha y saltar. 
+4. Para pasar de nivel el jugador devera interactuar con una terminal que le dara acceso al siguiente nivel. 
+4. Conforme el jugador pase los niveles encontraraá nuevos comandos que le permitiran hacer nuevas acciones, como atacar, agacharse y moverse a la izquierda.
+5. En niveles mas avanzados se ecnotrara con enemigos que trataran de impedir su paso, el jugador devera esquivarlos o atacarlos. 
+6. Cuanco el jugador pase los niveles suficientes y se sienta comodo con los controles del juego se enfrentara con el enemigo final.
+7. Despues de ganar el enfrentamiento contra el emnemigo final, el jugador habra completado el juego. 
 
 # Development
+
 
 ## Abstract Classes / Components
 
 ```
-1.	BasePhysics
-    a.	BasePlayer
-    b.	BaseEnemy
-    c.	BaseObject
-2.	BaseObstacle
-3.	BaseInteractable
-```
-
-_(example)_
+1.	Personajes 
+    a.	Jugador
+    b.	Enemigos normales
+    c.  Jefe Final
+2.	Objetos
+    a.  Bloques de códigos
+    b.  Plataformas 
+    c.  Obstáculos
 
 ## Derived Classes / Component Compositions
 
 ```
-1.	BasePlayer
-    a.	PlayerMain
-    b.	PlayerUnlockable
-2.	BaseEnemy
-    a.	EnemyWolf
-    b.	EnemyGoblin
-    c.	EnemyGuard (may drop key)
-    d.	EnemyGiantRat
-    e.	EnemyPrisoner
-3.	BaseObject
-    a.	ObjectRock (pick-up-able, throwable)
-    b.	ObjectChest (pick-up-able, throwable, spits gold coins with key)
-    c.	ObjectGoldCoin (cha-ching!)
-    d.	ObjectKey (pick-up-able, throwable)
-4.	BaseObstacle
-    a.	ObstacleWindow (destroyed with rock)
-    b.	ObstacleWall
-    c.	ObstacleGate (watches to see if certain buttons are pressed)
-5.	BaseInteractable
-    a.	InteractableButton
+1.	Jugador
+    a.  Costumización del personaje
+2.	EnemigosNormales
+    a.	EnemigoVolador1
+    b.  EnemigoVolador2
+    c.  EnemigoTerrestre1
+    d.  EnemigoTerrestre2
+3.  Jefe Final
+    a.  EnemigoFinal
+4.	Objetos
+    a.	Bloques de códigos (agarrable, usable)
+    b.	Plataformas (estaticas)
+    c.	Obstáculos (barrera)
+
 ```
 
 _(example)_
@@ -200,75 +190,67 @@ _(example)_
 
 ## Style Attributes
 
-What kinds of colors will you be using? Do you have a limited palette to work with? A post-processed HSV map/image? Consistency is key for immersion.
+Empezando en la cueva, utilizaremos una paleta de colores limitada, queremos un ambiente oscuro. Mientras el jugador progresa por los niveles, utilizaremos colores más vivos como rojo, azúl y verde, y para el último nivel, queremos dar un ambiente más futurista, entonces utilizaremos una paleta con efecto neón para que el jugador tenga una experiencia más inmersiva. 
 
-What kind of graphic style are you going for? Cartoony? Pixel-y? Cute? How, specifically? Solid, thick outlines with flat hues? Non-black outlines with limited tints/shades? Emphasize smooth curvatures over sharp angles? Describe a set of general rules depicting your style here.
+El estilo del arte será retro, de 64 bits ya que nos estamos inspirando en clásicos como Super Mario 64 o Sonic The Hedgehog.  
 
-    Well-designed feedback, both good (e.g. leveling up) and bad (e.g. being hit), are great for teaching the player how to play through trial and error, instead of scripting a lengthy tutorial. What kind of visual feedback are you going to use to let the player know they’re interacting with something? That they *can* interact with something?
 
 ## Graphics Needed
 
 ```
+Todo el arte es de tipo Pixel Art
+
 1.	Characters
-    a.	Human-like
-        i.	Goblin (idle, walking, throwing)
-        ii.	Guard (idle, walking, stabbing)
-        iii.	Prisoner (walking, running)
-    b.	Other
-        i.	Wolf (idle, walking, running)
-        ii.	Giant Rat (idle, scurrying)
-2.	Blocks
-    a.	Dirt
-    b.	Dirt/Grass
-    c.	Stone Block
-    d.	Stone Bricks
-    e.	Tiled Floor
-    f.	Weathered Stone Block
-    g.	Weathered Stone Bricks
-3.	Ambient
-    a.	Tall Grass
-    b.	Rodent (idle, scurrying)
-    c.	Torch
-    d.	Armored Suit
-    e.	Chains (matching Weathered Stone Bricks)
-    f.	Blood stains (matching Weathered Stone Bricks)
-4.	Other
-    a.	Chest
-    b.	Door (matching Stone Bricks)
-    c.	Gate
-    d.	Button (matching Weathered Stone Bricks)
+    a.	Tipo Humano
+        i.	Jugador principal (idle, caminando, saltando y atacando)
+        ii.	Enemigo Final (idle, caminando, saltando y atacando)
+    b.	Otros
+        i.	EnemigoVoldaor estilo bug (idle, volando)
+        ii.	EnemigoTerrestre estilo big (idle, caminando)
+2.	Bloques
+    a.	Piedra
+    b.	Ladrillos
+    c.	Pasto
+    d.	Metal
+    e.	Calles
+3.	Ambiente
+    a.	Cueva
+    b.	Bosque
+    c.	Ciudad
+    d.	Ciudad destruida
+    e.	Ciudad futuristica
+4.	Otros
+    a.	Terminal con la que pasa el nivel el jugador
+    b.	Terminal en la que programa el jugador
+    c.	Cambiar los colores del personaje
 ```
 
-_(example)_
-
-_(Note : If you’re soloing you might not need to define this part, as you can just use the Derived_
-_Classes + Themes section as a reference. It’s up to you.)_
 
 # Sounds/Music
 
 ## Style Attributes
 
-Again, consistency is key. Define that consistency here. What kind of instruments do you want to use in your music? Any particular tempo, key? Influences, genre? Mood?
 
-Stylistically, what kind of sound effects are you looking for? Do you want to exaggerate actions with lengthy, cartoony sounds (e.g. mario’s jump), or use just enough to let the player know something happened (e.g. mega man’s landing)? Going for realism? You can use the music style as a bit of a reference too.
-Remember, auditory feedback should stand out from the music and other sound effects so the player hears it well. Volume, panning, and frequency/pitch are all important aspects to consider in both music and sounds - so plan accordingly!
+Queremos que la vibra del juego sea como si fuera un clásico, como si estuvieras jugando un juego que se hizo hace 30 años. Tendremos piezas para cada momento, si el jugador esta en medio de la acción pondremos efectos y música que hagan sinergia con lo que esta pasando. Si el jugador consigue una victoria, habrá música que lo relaje y lo haga sentir orgulloso y satisfecho de su progreso. 
+
+Again, consistency is key. Define that consistency here. What kind of instruments do you want to use in your music? Any particular tempo, key? Influences, genre? Mood?
 
 ## Sounds Needed
 
 ```
 1.	Effects
-    a.	Soft Footsteps (dirt floor)
-    b.	Sharper Footsteps (stone floor)
-    c.	Soft Landing (low vertical velocity)
-    d.	Hard Landing (high vertical velocity)
-    e.	Glass Breaking
-    f.	Chest Opening
-    g.	Door Opening
+    a.	Pisadas del jugador
+    b.	Sonido de salto
+    c.	Sonido de caida
+    d.	Sondio de attaque
+    e.	Sonido de enemigo moviendose
 2.	Feedback
-    a.	Relieved “Ahhhh!” (health)
-    b.	Shocked “Ooomph!” (attacked)
-    c.	Happy chime (extra life)
-    d.	Sad chime (died)
+    a.	Sonido de toma de daño
+    b.	Sonido de muerte
+    c.	Sonido de derrota
+    d.	Sonido de victoria
+    e.  Sonido de enemigo tomando daño 
+    f.  Sonido de enemigo muriendo
 ```
 
 _(example)_
@@ -276,49 +258,44 @@ _(example)_
 ## Music Needed
 
 ```
-1.	Slow-paced, nerve-racking “forest” track
-2.	Exciting “castle” track
-3.	Creepy, slow “dungeon” track
-4.	Happy ending credits track
-5.	Rick Astley’s hit #1 single “Never Gonna Give You Up”
+1.	Musica de 8bit
+2.	Musica de victoria
+3.	Musica de derrota
+4.	Musica de batalla final
 ```
-
-_(example)_
-
-_(Note : Again, if you’re soloing you might be able to / want to skip this section. It’s up to you.)_
 
 # Schedule
 
-(what is a schedule, i don’t even. list is good enough, right? if not add some dates i guess)
-
 ```
-1.	develop base classes
-    a.	base entity
-        i.	base player
-        ii.	base enemy
-        iii.	base block
-    b.	base app state
-        i.	game world
-        ii.	menu world
-2.	develop player and basic block classes
-    a.	physics / collisions
-3.	find some smooth controls/physics
-4.	develop other derived classes
-    a.	blocks
-        i.	moving
-        ii.	falling
-        iii. breaking
-        iv.	cloud
-    b.	enemies
-        i. soldier
-        ii.	rat
-        iii. etc.
-5.	design levels
-a.	introduce motion/jumping
-b.	introduce throwing
-c.	mind the pacing, let the player play between lessons
-6.	design sounds
-7.	design music
+1.	Desarrollar el nivel principal
+    a.	Animaciones
+        i.	 Hacer que el personaje salte
+        ii.	 Hacer que el personaje se mueva
+        iii. Hacer que el personaje ataque
+    b.	Nivel
+        i.	Hacer los bloques en los que salta el personaje
+        ii.	Hacer el ambiente del primer nivel
+    
+2.	Desarrollar bloques de comando
+    a.	Implementar los bloques con el que el jugador controlará al personaje
+    b.  Implementar un canvas en el que el jugador podra utilizar los bloques
+
+3.	Desarrollo de enemigos
+    a.  Animaciones
+        i.   Hacer que el enemigo se mueva dependiendo de su clase
+        ii.  Hacer que el enemigo ataque
+    
+4.	Desarrollar al enemigo final
+    a.	Animaciones
+        i. Hacer que el enemigo final se mueva solo
+        ii. Hacer que el enemigo final ataque 
+        iii. Hacer la animación cuando un enemigo es derrotado
+    
+    b. Batalla
+        i. Hacer el diseño de la batalla final
+
+5.	Diseñar niveles
+6.  Diseñar sonidos
+7.	Diseñar musica
 ```
 
-_(example)_
