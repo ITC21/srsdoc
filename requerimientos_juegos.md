@@ -5,26 +5,26 @@
 # Tabla de Contenidos
 
 - [Game Design](#game-design)
-  - [Summary](#summary)
-  - [Gameplay](#gameplay)
-  - [Mindset](#mindset)
+    - [Summary](#summary)
+    - [Gameplay](#gameplay)
+    - [Mindset](#mindset)
 - [Technical](#technical)
-  - [Screens](#screens)
-  - [Controls](#controls)
-  - [Mechanics](#mechanics)
+    - [Screens](#screens)
+    - [Controls](#controls)
+    - [Mechanics](#mechanics)
 - [Level Design](#level-design)
-  - [Themes](#themes)
-  - [Game Flow](#game-flow)
+    - [Themes](#themes)
+    - [Game Flow](#game-flow)
 - [Development](#development)
-  - [Abstract Classes / Components](#abstract-classes--components)
-  - [Derived Classes / Component Compositions](#derived-classes--component-compositions)
+    - [Abstract Classes / Components](#abstract-classes--components)
+    - [Derived Classes / Component Compositions](#derived-classes--component-compositions)
 - [Graphics](#graphics)
-  - [Style Attributes](#style-attributes)
-  - [Graphics Needed](#graphics-needed)
+    - [Style Attributes](#style-attributes)
+    - [Graphics Needed](#graphics-needed)
 - [Sounds/Music](#soundsmusic)
-  - [Style Attributes](#style-attributes-1)
-  - [Sounds Needed](#sounds-needed)
-  - [Music Needed](#music-needed)
+    - [Style Attributes](#style-attributes-1)
+    - [Sounds Needed](#sounds-needed)
+    - [Music Needed](#music-needed)
 - [Schedule](#schedule)
 
 # Game Design
@@ -49,38 +49,38 @@ Queremos que el jugador vaya recorriendo los niveles y sienta que cada vez va ap
 ## Screens
 
 1. Title Screen
-   a. Start
-   b. Level Select
-   c. Options
-   d. Credits
-   e. Quit
+   * Start
+   * Level Select
+   * Options
+   * Credits
+   * Quit
 2. Level Select
-   a. List of levels
-   b. Back
+   * List of levels
+   * Back
 3. Game
-   a. Terminal
-   a. Blocks of code
-   b. Reset (Resets code blocks)
-   c. Play/Pause button
-   d. Indicator to current code block on execution
-   c. Level overview
+   * Terminal
+   * Blocks of code
+   * Reset (Resets code blocks)
+   * Play/Pause button
+   * Indicator to current code block on execution
+   * Level overview
 4. Game Over
-   a. Game Over
-   b. Cause of Death
-   d. Restart
-   e. Main Menu
+   * Game Over
+   * Cause of Death
+   * Restart
+   * Main Menu
 5. Level Complete
-   a. Level number
-   b. Completion Time
-   c. Number of deaths
-   d. Next Level
-   e. Main Menu
+   * Level number
+   * Completion Time
+   * Number of deaths
+   * Next Level
+   * Main Menu
 6. In Game Menu
-   a. Options
-   b. Main Menu
+   * Options
+   * Main Menu
 7. Options
-   a. Volume level (slider)
-   b. Terminal Theme
+   * Volume level (slider)
+   * Terminal Theme
 
 ## Controls
 
@@ -94,28 +94,29 @@ El personaje podrá ser controlado por bloques de código, estos serán escogido
 Are there any interesting mechanics? If so, how are you going to accomplish them? Physics,
 algorithms, etc.
 
-1. Principales
-    a. Caminar a la derecha
-    b. Caminar a la izquierda
-    c. Saltar
-    d. Agacharse
-    e. Atacar
 
-2. Secundarias
-    a. Saltar y atacar
-    b. Moverse y atacar
-    c. Esperar
-    d. Agacharse y atacar
-    e. Saltar y moverse
-    f. Agacharse y moverse
+1. Principales
+    * Derecha: caminar a la derecha.
+    * Izquierda: caminar a la izquierda.
+    * Saltar: salta moviendose a la derecha.
+    * Agacharse: mientras se mueve se agacha.
+    * Atacar: atacar a un enemigo.
+
+2. Secundarias (Combinación de bloques para mejorar las mecanicas principales)
+    * Saltar y atacar: atacar en el aire.
+    * Moverse y atacar: atacar mientras caminas.
+    * Esperar: esperar unos segundo en un lugar.
+    * Agacharse y atacar: atacar mientras de deslizas.
+    * Saltar y moverse: saltar mientras te mueves.
+    * Agacharse y moverse: deslizarse hacia una dirección.
 
 3. Enemigos
-    a. Moverse a la derecha
-    b. Moverse a la izquierda
-    c. Moverse arriba
-    d. Moverse abajo
-    e. Atacar
-    f. Saltar
+    * Moverse a la derecha
+    * Moverse a la izquierda
+    * Moverse arriba
+    * Moverse abajo
+    * Atacar
+    * Saltar
 
 # Level Design
 
@@ -124,41 +125,55 @@ algorithms, etc.
 ## Themes
 
 1. Cueva (Tutorial)
+    * Ambiente
+        * Oscuro
+        * tensión
+    * Objetos
+        * Antorchas
+        * Piedras
+   * Interactivos
+        * Primeros pasos
+        * Primer enemigo
+        
 
-   > a. Ambiente
-   >
-   > > i. Oscuro, tensión
+2. Bosque y Pueblo
+    * Ambiente
+        * Más peligroso que la cueva, ya que hay más enemigos, más luz y más acción.
+    * Objetos
+        * Arboles 
+        * Casas pequeñas
+    * Interactivos 
+        * Nuevos bloques de código 
+        * Enemigos normales 
+        * Enemigos especiales
 
-b. Objetosa
-i. Ambiente
+3. Ciudad
+    * Ambiente
+        * Vértigo
+        * adrenalina
+        * peligro
+        * rápidez
+        * muerte
+    * Objetos
+        * Edificios 
+        * Rascacielos 
+        * Calles
+    * Interactivos 
+        * Combinación de bloques de codigo
+        * Nuevos enemigos 
+        * Enemigos especiales 
 
-1. Torchas
-2. Piedras
-   ii. Interactivos
-3. Primeros pasos
-4. Primer enemigo
-
-5. Bosque y Pueblo
-   a. Ambiente
-   i. Más peligroso que la cueva ya que hay más enemigos, más luz, más acción
-   b. Objetos
-   i. Ambiente 1. Arboles 2. Casas pequeñas
-   ii. Interactivos 1. Nuevos bloques de código 2. Enemigos normales 3. Enemigos especiales
-
-6. Ciudad
-   a. Ambiente
-   i. Vértigo, adrenalina, peligro, rápidez, muerte
-   b. Objetos
-   i. Ambiente 1. Edificios 2. Rascacielos 3. Calles
-   ii. Interactivos 1. Nuevos bloques de código 2. Nuevos enemigos 3. Enemigos especiales 4. Terminal
-
-7. Ciudad futurista
-   a. Ambiente
-   i. Moderno, estético, futuristico, TRON
-   b. Objetos
-  ii. Interactivos 1. Nuevos bloques de código 2. Nuevos enemigos 3. Enemigos especiales 4. Jefe Final
-
-_(example)_
+4. Ciudad futurista
+    * Ambiente
+        * Moderno
+        * Estético
+        * futuristico
+        * TRON
+    * Objetos
+        * Edificios altos.
+        * naves espaciales.
+    * Interactivos 
+        * Jefe Final
 
 ## Game Flow
 
@@ -166,46 +181,41 @@ _(example)_
 2. Tendrá que mover a su personaja a la derecha para poder salir de la cueva y progresar.
 3. El jugador solo tendra acceso a dos comandos en el inicio del juego, caminar a la derecha y saltar. 
 4. Para pasar de nivel el jugador devera interactuar con una terminal que le dara acceso al siguiente nivel. 
-4. Conforme el jugador pase los niveles encontraraá nuevos comandos que le permitiran hacer nuevas acciones, como atacar, agacharse y moverse a la izquierda.
-5. En niveles mas avanzados se ecnotrara con enemigos que trataran de impedir su paso, el jugador devera esquivarlos o atacarlos. 
-6. Cuanco el jugador pase los niveles suficientes y se sienta comodo con los controles del juego se enfrentara con el enemigo final.
-7. Despues de ganar el enfrentamiento contra el emnemigo final, el jugador habra completado el juego. 
+5. Conforme el jugador pase los niveles encontrará nuevos comandos que le permitiran hacer nuevas acciones, como atacar, agacharse y moverse a la izquierda.
+6. En niveles mas avanzados se ecnotrara con enemigos que trataran de impedir su paso, el jugador devera esquivarlos o atacarlos. 
+7. Cuando el jugador pase los niveles suficientes y se sienta comodo con los controles del juego se enfrentara con el enemigo final.
+8. Despues de ganar el enfrentamiento contra el emnemigo final, el jugador habra completado el juego. 
 
 # Development
 
-
 ## Abstract Classes / Components
 
-```
 1.	Personajes 
-    a.	Jugador
-    b.	Enemigos normales
-    c.  Jefe Final
+    * Jugador
+    * Enemigos normales
+    * Jefe Final
 2.	Objetos
-    a.  Bloques de códigos
-    b.  Plataformas 
-    c.  Obstáculos
+    * Bloques de códigos
+    * Plataformas 
+    * Obstáculos
 
 ## Derived Classes / Component Compositions
 
-```
+
 1.	Jugador
-    a.  Costumización del personaje
+    * Costumización del personaje
 2.	EnemigosNormales
-    a.	EnemigoVolador1
-    b.  EnemigoVolador2
-    c.  EnemigoTerrestre1
-    d.  EnemigoTerrestre2
+    * EnemigoVolador1
+    * EnemigoVolador2
+    * EnemigoTerrestre1
+    * EnemigoTerrestre2
 3.  Jefe Final
-    a.  EnemigoFinal
+    * EnemigoFinal
 4.	Objetos
-    a.	Bloques de códigos (agarrable, usable)
-    b.	Plataformas (estaticas)
-    c.	Obstáculos (barrera)
+    * Bloques de códigos (agarrable, usable)
+    * Plataformas (estaticas)
+    * Obstáculos (barrera)
 
-```
-
-_(example)_
 
 # Graphics
 
@@ -218,39 +228,36 @@ El estilo del arte será retro, de 64 bits ya que nos estamos inspirando en clá
 
 ## Graphics Needed
 
-```
+
 Todo el arte es de tipo Pixel Art
 
 1.	Characters
-    a.	Tipo Humano
-        i.	Jugador principal (idle, caminando, saltando y atacando)
-        ii.	Enemigo Final (idle, caminando, saltando y atacando)
-    b.	Otros
-        i.	EnemigoVoldaor estilo bug (idle, volando)
-        ii.	EnemigoTerrestre estilo big (idle, caminando)
+    * Tipo Humano
+        * Jugador principal (idle, caminando, saltando y atacando)
+        * Enemigo Final (idle, caminando, saltando y atacando)
+    * Otros
+        * EnemigoVoldaor estilo bug (idle, volando)
+        * EnemigoTerrestre estilo big (idle, caminando)
 2.	Bloques
-    a.	Piedra
-    b.	Ladrillos
-    c.	Pasto
-    d.	Metal
-    e.	Calles
+    * Piedra
+    * Ladrillos
+    * Pasto
+    * Metal
+    * Calles
 3.	Ambiente
-    a.	Cueva
-    b.	Bosque
-    c.	Ciudad
-    d.	Ciudad destruida
-    e.	Ciudad futuristica
+    * Cueva
+    * Bosque
+    * Ciudad
+    * Ciudad destruida
+    * Ciudad futuristica
 4.	Otros
-    a.	Terminal con la que pasa el nivel el jugador
-    b.	Terminal en la que programa el jugador
-    c.	Cambiar los colores del personaje
-```
-
+    * Terminal con la que pasa el nivel el jugador
+    * Terminal en la que programa el jugador
+    * Cambiar los colores del personaje
 
 # Sounds/Music
 
 ## Style Attributes
-
 
 Queremos que la vibra del juego sea como si fuera un clásico, como si estuvieras jugando un juego que se hizo hace 30 años. Tendremos piezas para cada momento, si el jugador esta en medio de la acción pondremos efectos y música que hagan sinergia con lo que esta pasando. Si el jugador consigue una victoria, habrá música que lo relaje y lo haga sentir orgulloso y satisfecho de su progreso. 
 
@@ -258,65 +265,60 @@ Again, consistency is key. Define that consistency here. What kind of instrument
 
 ## Sounds Needed
 
-```
-1.	Effects
-    a.	Pisadas del jugador
-    b.	Sonido de salto
-    c.	Sonido de caida
-    d.	Sondio de attaque
-    e.	Sonido de enemigo moviendose
-2.	Feedback
-    a.	Sonido de toma de daño
-    b.	Sonido de muerte
-    c.	Sonido de derrota
-    d.	Sonido de victoria
-    e.  Sonido de enemigo tomando daño 
-    f.  Sonido de enemigo muriendo
-```
 
-_(example)_
+1.	Effects
+    * Pisadas del jugador
+    * Sonido de salto
+    * Sonido de caida
+    * Sondio de attaque
+    * Sonido de enemigo moviendose
+2.	Feedback
+    * Sonido de toma de daño
+    * Sonido de muerte
+    * Sonido de derrota
+    * Sonido de victoria
+    * Sonido de enemigo tomando daño 
+    * Sonido de enemigo muriendo
 
 ## Music Needed
 
-```
 1.	Musica de 8bit
 2.	Musica de victoria
 3.	Musica de derrota
 4.	Musica de batalla final
-```
+
 
 # Schedule
 
-```
 1.	Desarrollar el nivel principal
-    a.	Animaciones
-        i.	 Hacer que el personaje salte
-        ii.	 Hacer que el personaje se mueva
-        iii. Hacer que el personaje ataque
-    b.	Nivel
-        i.	Hacer los bloques en los que salta el personaje
-        ii.	Hacer el ambiente del primer nivel
+    * Animaciones
+        * Hacer que el personaje salte
+        * Hacer que el personaje se mueva
+        * Hacer que el personaje ataque
+    * Nivel
+        * Hacer los bloques en los que salta el personaje
+        * Hacer el ambiente del primer nivel
     
 2.	Desarrollar bloques de comando
-    a.	Implementar los bloques con el que el jugador controlará al personaje
-    b.  Implementar un canvas en el que el jugador podra utilizar los bloques
+    * Implementar los bloques con el que el jugador controlará al personaje
+    * Implementar un canvas en el que el jugador podra utilizar los bloques
 
 3.	Desarrollo de enemigos
-    a.  Animaciones
-        i.   Hacer que el enemigo se mueva dependiendo de su clase
-        ii.  Hacer que el enemigo ataque
+    * Animaciones
+        * Hacer que el enemigo se mueva dependiendo de su clase
+        * Hacer que el enemigo ataque
     
 4.	Desarrollar al enemigo final
-    a.	Animaciones
-        i. Hacer que el enemigo final se mueva solo
-        ii. Hacer que el enemigo final ataque 
-        iii. Hacer la animación cuando un enemigo es derrotado
+    * Animaciones
+        * Hacer que el enemigo final se mueva solo
+        * Hacer que el enemigo final ataque 
+        * Hacer la animación cuando un enemigo es derrotado
     
-    b. Batalla
-        i. Hacer el diseño de la batalla final
+    * Batalla
+        * Hacer el diseño de la batalla final
 
 5.	Diseñar niveles
 6.  Diseñar sonidos
 7.	Diseñar musica
-```
+
 
