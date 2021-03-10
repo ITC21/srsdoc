@@ -53,7 +53,6 @@ Queremos que el jugador vaya recorriendo los niveles y sienta que cada vez va ap
    * Level Select
    * Options
    * Credits
-   * Quit
 2. Level Select
    * List of levels
    * Back
