@@ -59,8 +59,6 @@ Nuestra applicación web será una adición a la página existente de STEAM. El 
 
 ## Clases de usuarios
 
-User classes and characteristics are critical. You’ll need to define who (different roles) is going to use the product and how. Don't forget to include each user needs.
-
 <ul>
 <li>Usuario: Cualquier persona que accese a la página web y pruebe el videojuego </li>
 <li>Administrador: Este usuario tiene el control sobre los usuarios que hay, además de poder ver los indicadores STEAM que recolecta el videojuego</li>
@@ -68,11 +66,6 @@ User classes and characteristics are critical. You’ll need to define who (diff
 
 ## Asumciones y Dependencias
 
-There might be factors that impact your ability to fulfill the requirements outlined in this document. What are those factors?
-
-Are there any assumptions you’re making that could turn out to be false? You should include those here, as well.
-
-Finally, you should note if your project is dependent on any external factors. This might include software components you’re reusing from another project.
 
 <ul>
 
@@ -88,21 +81,8 @@ Finally, you should note if your project is dependent on any external factors. T
 
 # Características del Sistema y Requerimientos
 
-This is where you detail the specific requirements for building your product.
 
 ## Requerimientos funcionales
-
-The functional requirements describe the services and functions of a system. Functional requirements must be precise and unambiguous.
-
-Include user stories, which are short descriptions of a feature, told from the perspective of one of your end user profiles. They are typically structured in the following fashion:
-
-> As a **[type of user]**, I want **[some goal]** so that **[some reason]**.
-
-You may want to use the following template table.
-
-| Title              | User story                                                      | Importance  | Notes                                     |
-| ------------------ | --------------------------------------------------------------- | ----------- | ----------------------------------------- |
-| _Short identifier_ | _As a [type of user], I want [some goal] so that [some reason]_ | _Must have_ | _Write here any additional consideration_ |
 
 <h2>Página Web:</h2>
 <ol>
@@ -131,8 +111,6 @@ You may want to use the following template table.
 
 ## Requerimientos de la Interface externa
 
-External interface requirements are types of functional requirements. They outline how your product will interface with other components or systems.
-
 There are several types of interfaces you may have requirements for, including:
 
 - User
@@ -142,7 +120,6 @@ There are several types of interfaces you may have requirements for, including:
 
 ## Requerimientos no funcionales
 
-Non-functional requirements are restrictions on the system or the development process. Non-functional requirements can be more critical than functional ones. If they are not met, the system is useless!
 
 # Screens
 
