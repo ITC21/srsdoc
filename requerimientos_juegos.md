@@ -53,6 +53,7 @@ Queremos que el jugador vaya recorriendo los niveles y sienta que cada vez va ap
    * Level Select
    * Options
    * Credits
+![Menu](/img/Menu.png)
 2. Level Select
    * List of levels
    * Back
@@ -63,6 +64,10 @@ Queremos que el jugador vaya recorriendo los niveles y sienta que cada vez va ap
    * Play/Pause button
    * Indicator to current code block on execution
    * Level overview
+![Primer Nivel C](/img/nivel1_cueva.jpg)
+![Segundo Nivel C](/img/nivel2_cueva.jpg)
+![Primer Nivel B](/img/nivel1_bosque.jpg)
+![Juego](/img/Primer_nivel.png)
 4. Game Over
    * Game Over
    * Cause of Death
@@ -116,6 +121,10 @@ algorithms, etc.
     * Moverse abajo
     * Atacar
     * Saltar
+
+4. Trampas
+    * picos salientes
+    * agujeros
 
 # Level Design
 
@@ -191,13 +200,16 @@ algorithms, etc.
 
 1.	Personajes 
     * Jugador
-    * Enemigos normales
-    * Jefe Final
+        * PlayerMovement
+    * Enemigos
 2.	Objetos
     * Bloques de códigos
-    * Plataformas 
+        * DragDrop
+        * CodeSlot
+        * command executed  
     * Obstáculos
-
+3. Pantallas
+    * SceneLoader
 ## Derived Classes / Component Compositions
 
 
