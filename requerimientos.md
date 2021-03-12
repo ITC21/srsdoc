@@ -122,7 +122,7 @@ There are several types of interfaces you may have requirements for, including:
 
 1. El mejor equipo de 3 programadores.
 2. Desarrollo en 10 semana.
-3. Sin presupesto(tampoco horas de servicio social).
+3. Sin presupesto.
 4. Desarrollo de pagina web con html, css y javascript.
 5. Desarrollo de base de datos con MySql.
 6. Desarrollo de videojuego con plataforma unity y lenguaje C#.
