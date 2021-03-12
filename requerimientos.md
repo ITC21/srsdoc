@@ -13,7 +13,7 @@
   - [Requerimientos funcionales](#Requerimientos-funcionales)
   - [Requerimientos de la Interface externa](#Requerimientos-de-Interface-externo)
   - [Requerimientos no funcionales](#Requerimientos-no-funcionales)
-- [Screens](#screens)
+- [Pantallas](#Pantallas)
   - [Wireframes](#wireframes)
 - [Referencias](#Referencias)
 
@@ -120,12 +120,63 @@ There are several types of interfaces you may have requirements for, including:
 
 ## Requerimientos no funcionales
 
+1. El mejor equipo de 3 programadores.
+2. Desarrollo en 10 semana.
+3. Sin presupesto(tampoco horas de servicio social).
+4. Desarrollo de pagina web con html, css y javascript.
+5. Desarrollo de base de datos con MySql.
+6. Desarrollo de videojuego con plataforma unity y lenguaje C#.
+7. Editor de codigo vscode.
+8. La pagian debe correr en la últimas versiones de los navegadores.
+9. Se utilizará la metodología UML.
+10. Comunicación y retroalimentación con el cliente por medio de slack.
+11. La pagina, videojuego y base de datos serán propiedad de STEAM.
+12. Los indicadores STEAM recolectados solo serán utilizados para el apoyo de los alumnos.
 
-# Screens
+# Pantallas
 
-Identifying the individual screens (for an app), or pages (for a website) are where a product’s shape starts to become clear. They are a distillation of the user stories into a set of distinct sections that satisfy the needs and behaviors identified so far. The process of outlining an application’s screens may also highlight any requirements or considerations that have been overlooked up to this point.
+## Pagina Web
 
-This has the dual purpose of both contributing to a more accurate vision of the product early on, and serving as a jumping-off point for the time when designers do get involved.
+1. Header con titulo del juego.
+2. Información de carrera ITC.
+3. Información del juego.
+4. Videojuego.
+5. Visualización de datos de los indicadores STEAM.
+
+## Videojuego
+
+1. Title Screen
+   * Start
+   * Level Select
+   * Options
+   * Credits
+2. Level Select
+   * List of levels
+   * Back
+3. Game
+   * Terminal
+   * Blocks of code
+   * Reset (Resets code blocks)
+   * Play/Pause button
+   * Indicator to current code block on execution
+   * Level overview
+4. Game Over
+   * Game Over
+   * Cause of Death
+   * Restart
+   * Main Menu
+5. Level Complete
+   * Level number
+   * Completion Time
+   * Number of deaths
+   * Next Level
+   * Main Menu
+6. In Game Menu
+   * Options
+   * Main Menu
+7. Options
+   * Volume level (slider)
+   * Terminal Theme
 
 ## Wireframes
 
